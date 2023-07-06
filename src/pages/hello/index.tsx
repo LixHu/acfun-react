@@ -1,8 +1,7 @@
-
 export default function Home() {
-    return (
-        <>
-            123
-        </>
-    )
+  return (
+    <>
+      123
+    </>
+  )
 }
