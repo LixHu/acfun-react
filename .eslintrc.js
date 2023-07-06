@@ -65,5 +65,9 @@ module.exports = {
         ],
         "no-nested-ternary": "off",
         "import/prefer-default-export": "off",
+        "no-console": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "object-curly-spacing": ["error", "always"],
+        "react/require-default-props": "off"
     },
 }
