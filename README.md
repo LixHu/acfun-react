@@ -1,38 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 目标
 
-## Getting Started
+![img.png](public/img.png)
 
-First, run the development server:
+### 功能
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- 主页 [x]
+- 视频详情页 [x]
+- 文章 [x]
+- 个人主页 [x]
+- 评论功能 [x]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 架构
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+不懂的同学自己去看看
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- nextJS
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Git 规范
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### commit 格式
 
-## Learn More
+commit格式，没上`commitizen`全靠自觉，没这个格式的重新改下提交commit
 
-To learn more about Next.js, take a look at the following resources:
+- feat : 新功能
+- fix : 修复bug
+- docs : 文档改变
+- style : 代码格式改变
+- refactor : 某个已有功能重构
+- perf : 性能优化
+- test : 增加测试
+- build : 改变了build工具 如 grunt换成了 npm
+- revert : 撤销上一次的 commit
+- chore : 构建过程或辅助工具的变动
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 分支
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+目前master分支其它人不给提交，管理员来合并，需要代码review
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+自建分支名，格式随意
