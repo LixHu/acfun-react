@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 interface MenuList {
   title: string,
@@ -12,15 +12,15 @@ interface navbarProps<T> {
 }
 
 export function Navbar(props: navbarProps<MenuList>) {
-  // const a: IMateData = { title: '' }
+  const [metaData, setMetaData] = useState<NComponent.IMateData>({})
   useEffect(() => {
-    const { title, menuList } = props
-    console.log(title, menuList)
+    const { title } = props
+    setMetaData({ title })
   }, [])
   return (
     <>
       <Head>
-        <title>ceshi</title>
+        <title>{metaData.title}</title>
       </Head>
       <main>
         11

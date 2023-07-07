@@ -24,7 +24,10 @@ module.exports = {
             },
         },
     },
-
+    globals: {
+        NComponent: "readonly",
+        NPages: "readonly"
+    },
     plugins: ["@typescript-eslint"],
     extends: [
         "next/core-web-vitals",
@@ -32,8 +35,6 @@ module.exports = {
         "airbnb",
         "prettier"
     ],
-
-
     rules: {
         "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint/no-explicit-any": "error",
@@ -68,6 +69,7 @@ module.exports = {
         "no-console": "off",
         "react-hooks/exhaustive-deps": "off",
         "object-curly-spacing": ["error", "always"],
-        "react/require-default-props": "off"
+        "react/require-default-props": "off",
+        "react/no-unused-prop-types": "off"
     },
 }

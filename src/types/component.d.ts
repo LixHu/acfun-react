@@ -1,3 +1,5 @@
-declare interface IMateData {
-  title: string
+declare namespace NComponent {
+  declare interface IMateData {
+    title?: string
+  }
 }
