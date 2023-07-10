@@ -9,11 +9,11 @@ interface navbarProps<T> {
 
 export function Navbar(props: navbarProps<NComponent.ILayoutMenu>) {
   const [metaData, setMetaData] = useState<NComponent.IMateData>({
-    title: '首页 - Acfun'
+    title: '首页'
   })
   useEffect(() => {
     const { title } = props
-    setMetaData({ title })
+    setMetaData({ title: `${title} - AcFun` })
   }, [])
   return (
     <>
@@ -23,8 +23,9 @@ export function Navbar(props: navbarProps<NComponent.ILayoutMenu>) {
       </Head>
       <main>
         <div className={`${styles.nav}`}>
-
-          right
+          {/* TODO 文件链接 */}
+          <div className={`${styles.logo}`}/>
+          <div className={`${styles.userContent}`} />
         </div>
       </main>
     </>
