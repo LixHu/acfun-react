@@ -30,6 +30,7 @@ module.exports = {
     },
     plugins: ["@typescript-eslint"],
     extends: [
+
         "next/core-web-vitals",
         "plugin:@typescript-eslint/recommended",
         "airbnb",
@@ -70,6 +71,7 @@ module.exports = {
         "react-hooks/exhaustive-deps": "off",
         "object-curly-spacing": ["error", "always"],
         "react/require-default-props": "off",
-        "react/no-unused-prop-types": "off"
+        "react/no-unused-prop-types": "off",
+        "@typescript-eslint/no-var-requires": "off"
     },
 }

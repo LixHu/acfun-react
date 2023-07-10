@@ -1,10 +1,11 @@
-import '@/styles/globals.css'
+import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { Layout } from "@/component/layout"
 
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <Layout title="首页" menuList={[]}>
       <Component {...pageProps} />
     </Layout>
   )

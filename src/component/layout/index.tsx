@@ -2,14 +2,16 @@ import React from "react"
 import { Navbar } from "@/component/navbar"
 import { Footer } from "@/component/footer"
 
-interface layoutParamInter {
+
+interface ILayoutInter extends NComponent.ILayoutData {
   children: React.ReactNode
 }
 
-export function Layout({ children }: layoutParamInter) {
+export function Layout(props: ILayoutInter) {
+  const { children, title, menuList } = props
   return (
     <>
-      <Navbar title="你猜猜" menuList={[]}/>
+      <Navbar title={title} menuList={menuList}/>
       <main>
         {children}
       </main>
