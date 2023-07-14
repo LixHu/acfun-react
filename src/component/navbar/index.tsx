@@ -20,12 +20,13 @@ export function Navbar(props: navbarProps<NComponent.ILayoutMenu>) {
       <Head>
         <title>{metaData.title}</title>
         <meta charSet="utf8"/>
+        <meta name="viewport" content="initial-scale=1, width=device-width"/>
       </Head>
       <main>
         <div className={`${styles.nav}`}>
           {/* TODO 文件链接 */}
           <div className={`${styles.logo}`}/>
-          <div className={`${styles.userContent}`} />
+          <div className={`${styles.userContent}`}/>
         </div>
       </main>
     </>
