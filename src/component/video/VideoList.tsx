@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import { VideoItem, VideoCategory } from '../../types/video';
 import styles from '../../styles/home.module.scss';
 import Image from 'next/image';
@@ -9,8 +10,14 @@ interface VideoListProps {
 }
 
 export const VideoList: React.FC<VideoListProps> = ({ videos, categories }) => {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  
+  // 处理视频卡片点击
+  const handleVideoClick = (videoId: string) => {
+    router.push(`/video/${videoId}`);
+  };
 
   // 过滤视频列表
   const filteredVideos = videos.filter(video => {
@@ -72,7 +79,11 @@ export const VideoList: React.FC<VideoListProps> = ({ videos, categories }) => {
       {/* 视频网格 */}
       <div className={styles.videoGrid}>
         {filteredVideos.map(video => (
-          <div key={video.id} className={styles.videoCard}>
+          <div 
+            key={video.id} 
+            className={styles.videoCard}
+            onClick={() => handleVideoClick(video.id)}
+          >
             <div className={styles.videoThumbnail}>
               {/* 使用静态图片替代真实视频缩略图 */}
               <Image 

@@ -2,8 +2,9 @@ import React from 'react';
 import { VideoList } from '../component/video/VideoList';
 import { VideoItem, VideoCategory } from '../types/video';
 
-// 模拟视频数据
-const mockVideos: VideoItem[] = [
+export default function Home() {
+  // 模拟视频数据
+  const mockVideos: VideoItem[] = [
   {
     id: '1',
     title: '【AI】人工智能如何改变我们的生活？深度解析AI技术发展趋势',
@@ -138,10 +139,12 @@ const mockCategories: VideoCategory[] = [
   { id: 'anime', name: '动漫' }
 ];
 
-export default function Home() {
   return (
     <main>
       <VideoList videos={mockVideos} categories={mockCategories} />
     </main>
   );
 }
+
+// 静态属性，供父组件获取页面标题
+Home.pageTitle = '首页 - AcFun视频';
